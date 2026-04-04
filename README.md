@@ -8,7 +8,7 @@ Um aplicativo moderno e interativo construído em **React** para envio e gerenci
 
 - **React** — Biblioteca JavaScript para construção da interface de usuário.
 - **Cypress** — Framework de testes End-to-End (E2E) para automação de cenários reais.
-- **[Lume Stack API](https://lume.stack/)** — Integrada ao projeto.
+- **[Lume Stack API](https://github.com/LumeStack/post-comment-react-app.git)** — Integrada ao projeto.
   > ⚠️ **Nota Importante:** A Lume Stack atua neste projeto exclusivamente como uma **API de Teste**. O seu objetivo principal é fornecer dados fictícios para validar a usabilidade e garantir que os testes com Cypress reflitam o comportamento esperado.
 
 ---
@@ -67,14 +67,5 @@ npx cypress open
 ```
 Esse comando irá iniciar o Cypress e abrir uma interface visual para você visualizar interativamente a execução dos testes sendo simulados diretamente num navegador real.
 
----
 
-## 🏗️ Build para Produção
 
-Se o seu objetivo for hospedar o sistema numa infraestrutura real, você pode gerar a versão de produção otimizada executando:
-
-```shell
-npm run build
-```
-
-> Esse processo agrupará, otimizará e irá gerar uma pasta `build` (ou as vezes `dist`) contendo a versão super rápida e final da sua aplicação pronta para ser colocada no ar.
