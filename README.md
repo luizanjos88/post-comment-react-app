@@ -1,53 +1,80 @@
-# Post Comment React App
+# 💬 Post Comment React App
 
-Este repositório contém um aplicativo React simples de comentário de post.
+Um aplicativo moderno e interativo construído em **React** para envio e gerenciamento de comentários em postagens, utilizando a **API de teste da Lume Stack** para obter e validar os dados fictícios. O projeto possui forte foco em estabilidade, contando com testes automatizados para garantir a qualidade da interface.
 
-### Pré-requisitos
+---
 
-Certifique-se de ter o Node.js instalado em seu sistema antes de executar este aplicativo.
+## 🚀 Tecnologias e Ferramentas
 
-- Node.js: [Baixe aqui](https://nodejs.org)
+- **React** — Biblioteca JavaScript para construção da interface de usuário.
+- **Cypress** — Framework de testes End-to-End (E2E) para automação de cenários reais.
+- **[Lume Stack API](https://lume.stack/)** — Integrada ao projeto.
+  > ⚠️ **Nota Importante:** A Lume Stack atua neste projeto exclusivamente como uma **API de Teste**. O seu objetivo principal é fornecer dados fictícios para validar a usabilidade e garantir que os testes com Cypress reflitam o comportamento esperado.
 
-### Instalação
+---
 
-1. Clone o repositório para o seu diretório local:
+## 🛠️ Pré-requisitos
+
+Antes de começar, é indispensável que você tenha o **Node.js** instalado em seu computador para rodar a aplicação e gerenciar os pacotes.
+
+🔗 [Baixe o Node.js oficial aqui](https://nodejs.org)
+
+---
+
+## 📦 Como rodar o projeto localmente
+
+Siga o passo a passo abaixo para clonar, instalar e rodar a aplicação na sua máquina:
+
+1. **Clone o repositório:**
+   ```shell
+   git clone <URL do repositório>
+   ```
+
+2. **Acesse a raiz do projeto:**
+   ```shell
+   cd <nome do diretório>
+   ```
+
+3. **Instale as dependências necessárias:**
+   ```shell
+   npm install
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+   ```shell
+   npm run dev
+   ```
+
+> **Acesso:** Abra o seu navegador e acesse `http://localhost:5173`. O Vite (ou a ferramenta de build usada) possui hot-reload ativado, o que significa que qualquer alteração feita no código-fonte irá atualizar a página automaticamente.
+
+---
+
+## 🧪 Testes Automatizados (E2E)
+
+Para atestar o pleno funcionamento do fluxo de usuários e garantir que novas atualizações não quebrem a aplicação, o projeto conta com testes automatizados construídos com o **Cypress**.
+
+**Os cenários validados incluem:**
+- ✅ Inserção e publicação de comentários com sucesso;
+- ✅ Validação em tela confirmando que o comentário digitado aparece corretamente;
+- ✅ Fluxo de exclusão do comentário recém-criado na interface.
+
+### Como executar os testes:
+
+Certifique-se de que o ambiente de desenvolvimento esteja rodando no terminal (usando `npm run dev`) e, num segundo terminal, execute o seguinte comando:
 
 ```shell
-git clone <URL do repositório>
+npx cypress open
 ```
+Esse comando irá iniciar o Cypress e abrir uma interface visual para você visualizar interativamente a execução dos testes sendo simulados diretamente num navegador real.
 
-2. Navegue até o diretório do projeto:
+---
 
-```shell
-cd <nome do diretório>
-```
+## 🏗️ Build para Produção
 
-3. Instale as dependências necessárias:
-
-```shell
-npm install
-```
-
-### Executando o Aplicativo
-
-Depois de concluir a instalação, você pode iniciar o aplicativo executando o seguinte comando:
-
-```shell
-npm run dev
-```
-
-Isso iniciará o aplicativo React em modo de desenvolvimento. Abra o navegador e acesse `http://localhost:5173` para visualizar o aplicativo.
-
-Qualquer alteração no código-fonte será automaticamente recarregada no navegador.
-
-### Construção do Projeto
-
-Para criar uma versão otimizada do aplicativo para produção, execute o seguinte comando:
+Se o seu objetivo for hospedar o sistema numa infraestrutura real, você pode gerar a versão de produção otimizada executando:
 
 ```shell
 npm run build
 ```
 
-Isso criará uma pasta `build` no diretório do projeto com os arquivos otimizados para produção.
-
-
+> Esse processo agrupará, otimizará e irá gerar uma pasta `build` (ou as vezes `dist`) contendo a versão super rápida e final da sua aplicação pronta para ser colocada no ar.
